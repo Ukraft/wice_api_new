@@ -169,7 +169,7 @@
       "targetSchema": {
         "type": "object",
         "properties": {
-          "organizations": {
+          "organization": {
             "type": "array",
             "items": {
               "rel": "self"

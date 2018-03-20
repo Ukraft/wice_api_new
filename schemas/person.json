@@ -135,7 +135,7 @@
     "links": [{
             "title": "Get a single person",
             "description": "Get a single person saved by a specific user",
-            "rel": "instances",
+            "rel": "self",
             "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",
             "authentication_needed": true,
@@ -162,11 +162,9 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "persons": {
+                    "person": {
                         "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
+                        "items": {"rel": "self"}
                     }
                 }
             }
@@ -174,7 +172,7 @@
         {
             "title": "Get all persons",
             "description": "Get all persons saved by a specific user",
-            "rel": "instances",
+            "rel": "self",
             "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",
             "authentication_needed": true,
