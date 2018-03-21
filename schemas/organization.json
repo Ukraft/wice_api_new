@@ -22,10 +22,40 @@
         },
         "street_number": {
             "type": "string",
+<<<<<<< HEAD
             "description": "Street number",
             "example": "124"
         },
         "zip_code": {
+=======
+            "description": "Rowid",
+            "example": "197775"
+          }
+        }
+      },
+      "targetSchema": {
+        "type": "object",
+        "properties": {
+          "organization": {
+            "type": "array",
+            "items": {
+              "rel": "self"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Get all organizations",
+      "description": "Get all organizations saved by a specific user",
+      "rel": "instances",
+      "href": "plugin/wp_elasticio_backend/json",
+      "method": "GET",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "method": {
+>>>>>>> 5d15524b3f88c2b4ac328b23f1530d18f889d917
             "type": "string",
             "description": "Zip code",
             "example": "29610"

@@ -145,7 +145,7 @@
     "links": [{
             "title": "Get a single person",
             "description": "Get a single person saved by a specific user",
-            "rel": "instances",
+            "rel": "self",
             "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",
             "authentication_needed": true,
@@ -172,6 +172,7 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
+<<<<<<< HEAD
                     "rowid": { "$ref": "#/definitions/rowid" },
                     "for_rowid": { "$ref": "#/definitions/for_rowid" },
                     "salutation": { "$ref": "#/definitions/salutation" },
@@ -187,13 +188,19 @@
                     "fax": { "$ref": "#/definitions/fax" },
                     "email": { "$ref": "#/definitions/email" },
                     "url": { "$ref": "#/definitions/url" }
+=======
+                    "person": {
+                        "type": "array",
+                        "items": {"rel": "self"}
+                    }
+>>>>>>> 5d15524b3f88c2b4ac328b23f1530d18f889d917
                 }
             }
         },
         {
             "title": "Get all persons",
             "description": "Get all persons saved by a specific user",
-            "rel": "instances",
+            "rel": "self",
             "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",
             "authentication_needed": true,
