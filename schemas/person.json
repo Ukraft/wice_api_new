@@ -172,7 +172,7 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-<<<<<<< HEAD
+
                     "rowid": { "$ref": "#/definitions/rowid" },
                     "for_rowid": { "$ref": "#/definitions/for_rowid" },
                     "salutation": { "$ref": "#/definitions/salutation" },
@@ -188,12 +188,6 @@
                     "fax": { "$ref": "#/definitions/fax" },
                     "email": { "$ref": "#/definitions/email" },
                     "url": { "$ref": "#/definitions/url" }
-=======
-                    "person": {
-                        "type": "array",
-                        "items": {"rel": "self"}
-                    }
->>>>>>> 5d15524b3f88c2b4ac328b23f1530d18f889d917
                 }
             }
         },
