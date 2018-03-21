@@ -30,6 +30,11 @@
             "description": "Last name",
             "example": "Doe"
         },
+        "name_update": {
+            "type": "string",
+            "description": "Last name update",
+            "example": "Smith"
+        },
         "birthday": {
             "type": "date-time",
             "description": "Birthday",
@@ -79,6 +84,11 @@
             "type": "string",
             "description": "Url",
             "example": "www.johndoe.com"
+        },
+        "msg_delete": {
+            "type": "string",
+            "description": "Message",
+            "example": "Person was deleted"
         }
     },
     "required": [
@@ -162,12 +172,21 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "persons": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
-                    }
+                    "rowid": { "$ref": "#/definitions/rowid" },
+                    "for_rowid": { "$ref": "#/definitions/for_rowid" },
+                    "salutation": { "$ref": "#/definitions/salutation" },
+                    "firstname": { "$ref": "#/definitions/firstname" },
+                    "name": { "$ref": "#/definitions/name" },
+                    "birthday": { "$ref": "#/definitions/birthday" },
+                    "private_street": { "$ref": "#/definitions/private_street" },
+                    "private_zip_code": { "$ref": "#/definitions/private_zip_code" },
+                    "private_town": { "$ref": "#/definitions/private_town" },
+                    "private_state": { "$ref": "#/definitions/private_state" },
+                    "private_country": { "$ref": "#/definitions/private_country" },
+                    "phone": { "$ref": "#/definitions/phone" },
+                    "fax": { "$ref": "#/definitions/fax" },
+                    "email": { "$ref": "#/definitions/email" },
+                    "url": { "$ref": "#/definitions/url" }
                 }
             }
         },
@@ -194,13 +213,24 @@
                 }
             },
             "targetSchema": {
-                "type": "object",
-                "properties": {
-                    "persons": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "rowid": { "$ref": "#/definitions/rowid" },
+                        "for_rowid": { "$ref": "#/definitions/for_rowid" },
+                        "salutation": { "$ref": "#/definitions/salutation" },
+                        "firstname": { "$ref": "#/definitions/firstname" },
+                        "name": { "$ref": "#/definitions/name" },
+                        "birthday": { "$ref": "#/definitions/birthday" },
+                        "private_street": { "$ref": "#/definitions/private_street" },
+                        "private_zip_code": { "$ref": "#/definitions/private_zip_code" },
+                        "private_town": { "$ref": "#/definitions/private_town" },
+                        "private_state": { "$ref": "#/definitions/private_state" },
+                        "private_country": { "$ref": "#/definitions/private_country" },
+                        "phone": { "$ref": "#/definitions/phone" },
+                        "fax": { "$ref": "#/definitions/fax" },
+                        "email": { "$ref": "#/definitions/email" },
+                        "url": { "$ref": "#/definitions/url" }
                     }
                 }
             }
@@ -239,12 +269,9 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "persons": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
-                    }
+                    "rowid": { "$ref": "#/definitions/rowid" },
+                    "firstname": { "$ref": "#/definitions/firstname" },
+                    "name": { "$ref": "#/definitions/name" }
                 }
             }
         },
@@ -282,12 +309,21 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "persons": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
-                    }
+                    "rowid": { "$ref": "#/definitions/rowid" },
+                    "for_rowid": { "$ref": "#/definitions/for_rowid" },
+                    "salutation": { "$ref": "#/definitions/salutation" },
+                    "firstname": { "$ref": "#/definitions/firstname" },
+                    "name": { "$ref": "#/definitions/name_update" },
+                    "birthday": { "$ref": "#/definitions/birthday" },
+                    "private_street": { "$ref": "#/definitions/private_street" },
+                    "private_zip_code": { "$ref": "#/definitions/private_zip_code" },
+                    "private_town": { "$ref": "#/definitions/private_town" },
+                    "private_state": { "$ref": "#/definitions/private_state" },
+                    "private_country": { "$ref": "#/definitions/private_country" },
+                    "phone": { "$ref": "#/definitions/phone" },
+                    "fax": { "$ref": "#/definitions/fax" },
+                    "email": { "$ref": "#/definitions/email" },
+                    "url": { "$ref": "#/definitions/url" }
                 }
             }
         },
@@ -324,12 +360,10 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "persons": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
-                    }
+                    "msg": { "$ref": "#/definitions/msg_delete" },
+                    "rowid": { "$ref": "#/definitions/rowid" },
+                    "firstname": { "$ref": "#/definitions/firstname" },
+                    "name": { "$ref": "#/definitions/name" }
                 }
             }
         }
