@@ -1,7 +1,7 @@
 {
     "id": "/person",
     "title": "Person",
-    "description": "A saved person in Wice CRM",
+    "description": "Saved persons in Wice CRM",
     "type": "object",
 
     "definitions": {
@@ -193,7 +193,7 @@
         },
         {
             "title": "Get all persons",
-            "description": "Get all persons saved by a specific user",
+            "description": "Get all persons",
             "rel": "self",
             "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",

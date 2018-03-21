@@ -1,7 +1,7 @@
 {
     "id": "/organization",
     "title": "Organization",
-    "description": "Master Data Model for Addresses to use in the Open Integration Hub",
+    "description": "Saved organizations in Wice CRM",
     "type": "object",
 
     "definitions": {
@@ -107,16 +107,24 @@
             "$ref": "#/definitions/url"
         }
     },
+    // dieser Kram muß wech:
+    // hier weiter machen
     "links": [{
             "title": "Get all organizations",
-            "description": "Get all organizations saved by a specific user",
-            "rel": "instances",
-            "href": "mp_contact/json_respond/address_company/json_mainview",
+            "description": "Get all organizations",
+            "rel": "self",
+            "href": "plugin/wp_elasticio_backend/json",
             "method": "GET",
+            "authentication_needed": true,
             "schema": {
                 "type": "object",
                 "properties": {
-                    "mp_cookie": {
+                    "method": {
+                        "type": "string",
+                        "description": "Method get_all_persons in Wice",
+                        "example": "get_all_persons"
+                    },
+                    "cookie": {
                         "type": "string",
                         "description": "Cookie",
                         "example": "dqerpzf8bpj7yoc9kryzbf8zx8e4funj"
