@@ -49,6 +49,11 @@
             "type": "string",
             "description": "Long Description",
             "example": "Retaining bolt for vertical stabilizer, A123-34-alpha"
+        },
+        "msg_del": {
+            "type": "string",
+            "description": "Delete message",
+            "example": "Article is now deleted"
         }
     },
     "required": [
@@ -113,7 +118,30 @@
                     "articles": {
                         "type": "array",
                         "items": {
-                            "rel": "self"
+                            "rowid": {
+                                "$ref": "#/definitions/rowid"
+                            },
+                            "number": {
+                                "$ref": "#/definitions/number"
+                            },
+                            "description": {
+                                "$ref": "#/definitions/description"
+                            },
+                            "sales_price": {
+                                "$ref": "#/definitions/sales_price"
+                            },
+                            "purchase_price": {
+                                "$ref": "#/definitions/purchase_price"
+                            },
+                            "weight": {
+                                "$ref": "#/definitions/weight"
+                            },
+                            "in_stock": {
+                                "$ref": "#/definitions/in_stock"
+                            },
+                            "long_description": {
+                                "$ref": "#/definitions/long_description"
+                            }
                         }
                     }
                 }
@@ -147,7 +175,31 @@
                     "articles": {
                         "type": "array",
                         "items": {
-                            "rel": "self"
+                            "rowid": {
+                                "$ref": "#/definitions/rowid"
+                            },
+                            "number": {
+                                "$ref": "#/definitions/number"
+                            },
+                            "description": {
+                                "$ref": "#/definitions/description"
+                            },
+                            "sales_price": {
+                                "$ref": "#/definitions/sales_price"
+                            },
+                            "purchase_price": {
+                                "$ref": "#/definitions/purchase_price"
+                            },
+                            "weight": {
+                                "$ref": "#/definitions/weight"
+                            },
+                            "in_stock": {
+                                "$ref": "#/definitions/in_stock"
+                            },
+                            "long_description": {
+                                "$ref": "#/definitions/long_description"
+                            }
+
                         }
                     }
                 }
@@ -232,7 +284,31 @@
                     "articles": {
                         "type": "array",
                         "items": {
-                            "rel": "self"
+                            "rowid": {
+                                "$ref": "#/definitions/rowid"
+                            },
+                            "number": {
+                                "$ref": "#/definitions/number"
+                            },
+                            "description": {
+                                "$ref": "#/definitions/description"
+                            },
+                            "sales_price": {
+                                "$ref": "#/definitions/sales_price"
+                            },
+                            "purchase_price": {
+                                "$ref": "#/definitions/purchase_price"
+                            },
+                            "weight": {
+                                "$ref": "#/definitions/weight"
+                            },
+                            "in_stock": {
+                                "$ref": "#/definitions/in_stock"
+                            },
+                            "long_description": {
+                                "$ref": "#/definitions/long_description"
+                            }
+
                         }
                     }
                 }
@@ -271,14 +347,11 @@
             "targetSchema": {
                 "type": "object",
                 "properties": {
-                    "articles": {
-                        "type": "array",
-                        "items": {
-                            "rel": "self"
-                        }
-                    }
+                    "msg": { "$ref": "#/definitions/msg_del" },
+                    "rowid": { "$ref": "#/definitions/rowid" }
                 }
             }
         }
+
     ]
 }

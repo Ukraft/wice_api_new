@@ -259,7 +259,7 @@
                     },
                     "data": {
                         "type": "string",
-                        "description": "Person",
+                        "description": "Name of the person",
                         "example": {
                             "firstname": "John",
                             "name": "Doe"

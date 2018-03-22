@@ -107,8 +107,7 @@
             "$ref": "#/definitions/url"
         }
     },
-    // dieser Kram muß wech:
-    // hier weiter machen
+
     "links": [{
             "title": "Get all organizations",
             "description": "Get all organizations",
@@ -121,8 +120,8 @@
                 "properties": {
                     "method": {
                         "type": "string",
-                        "description": "Method get_all_persons in Wice",
-                        "example": "get_all_persons"
+                        "description": "Method get_all_organizations in Wice",
+                        "example": "get_all_organizations"
                     },
                     "cookie": {
                         "type": "string",
@@ -167,7 +166,7 @@
                     },
                     "name": {
                         "$ref": "#/properties/name"
-                    }
+                    },
                 }
             },
             "targetSchema": {
@@ -175,22 +174,22 @@
                 "properties": {
                     "rowid": { "$ref": "#/definitions/rowid" },
                     "name": { "$ref": "#/definitions/name" },
-                    "street": { "$ref": "#/definitions/street" },
-                    "street_number": { "$ref": "#/definitions/street_number" },
-                    "zip_code": { "$ref": "#/definitions/zip_code" },
-                    "town": { "$ref": "#/definitions/town" },
-                    "state": { "$ref": "#/definitions/state" },
-                    "country": { "$ref": "#/definitions/country" },
-                    "phone": { "$ref": "#/definitions/phone" },
-                    "fax": { "$ref": "#/definitions/fax" },
-                    "email": { "$ref": "#/definitions/email" },
-                    "url": { "$ref": "#/definitions/url" }
+                    "street": { "$ref": "" },
+                    "street_number": { "$ref": "" },
+                    "zip_code": { "$ref": "" },
+                    "town": { "$ref": "" },
+                    "state": { "$ref": "" },
+                    "country": { "$ref": "" },
+                    "phone": { "$ref": "" },
+                    "fax": { "$ref": "" },
+                    "email": { "$ref": "" },
+                    "url": { "$ref": "" }
                 }
             }
         },
         {
             "title": "Update an organization",
-            "description": "To update an organization you need the pass organization rowid and the field whih you want to update.",
+            "description": "To update an organization you need the pass organization rowid and the field whitch you want to update.",
             "rel": "instances",
             "href": "mp_contact/json_respond/address_company/json_update",
             "method": "POST",
